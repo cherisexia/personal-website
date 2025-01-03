@@ -1,0 +1,107 @@
+/* styles.css */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: auto;
+    background: #fff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+form {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+form input {
+    width: 40%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+form button {
+    padding: 10px 20px;
+    background: #28a745;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background: #218838;
+}
+
+#course-list {
+    list-style: none;
+    padding: 0;
+}
+
+.course-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.course-details {
+    flex: 1;
+}
+
+.course-details a {
+    text-decoration: none;
+    color: #007bff;
+    font-weight: bold;
+}
+
+.course-details a:hover {
+    text-decoration: underline;
+}
+
+.progress-container {
+    margin-top: 5px;
+}
+
+.progress-bar {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 3px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.progress {
+    height: 20px;
+    background-color: #28a745;
+    width: 0%;
+    transition: width 0.3s;
+}
+
+.delete-btn {
+    background: #dc3545;
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.delete-btn:hover {
+    background: #c82333;
+}
