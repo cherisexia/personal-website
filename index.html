@@ -1,28 +1,104 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Courses</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex Carter | Web Developer</title>
+  <meta name="description" content="Personal website for Alex Carter, a front-end web developer building accessible and fast websites.">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>My Courses</h1>
-        
-        <!-- Add Course Form -->
-        <form id="course-form">
-            <input type="text" id="course-name" placeholder="Course Name" required>
-            <input type="url" id="course-url" placeholder="Course URL" required>
-            <button type="submit">Add Course</button>
-        </form>
-        
-        <!-- Courses List -->
-        <ul id="course-list">
-            <!-- Dynamic Content -->
-        </ul>
-    </div>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="#home" class="logo">Alex<span>Dev</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <script src="script.js"></script>
+  <main>
+    <section id="home" class="hero">
+      <div class="container hero-content">
+        <p class="eyebrow">Hello, I am</p>
+        <h1>Alex Carter</h1>
+        <p class="subtitle">I build clean, responsive websites and web apps.</p>
+        <div class="hero-actions">
+          <a class="btn primary" href="#projects">View Projects</a>
+          <a class="btn ghost" href="#contact">Hire Me</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about" class="section container">
+      <h2>About Me</h2>
+      <p>
+        I am a front-end developer focused on crafting modern user experiences with HTML, CSS,
+        and JavaScript. I enjoy turning ideas into products that are accessible and easy to use.
+      </p>
+    </section>
+
+    <section id="projects" class="section container">
+      <h2>Projects</h2>
+      <div class="card-grid">
+        <article class="card">
+          <h3>TaskFlow App</h3>
+          <p>A productivity web app for managing daily tasks with drag-and-drop boards.</p>
+          <a href="https://example.com/taskflow" target="_blank" rel="noopener noreferrer" aria-label="View TaskFlow App">View Project →</a>
+        </article>
+        <article class="card">
+          <h3>Foodie Finder</h3>
+          <p>A responsive restaurant discovery site featuring filters, maps, and reviews.</p>
+          <a href="https://example.com/foodie-finder" target="_blank" rel="noopener noreferrer" aria-label="View Foodie Finder">View Project →</a>
+        </article>
+        <article class="card">
+          <h3>Portfolio Template</h3>
+          <p>A customizable portfolio starter template built for freelancers and creators.</p>
+          <a href="https://example.com/portfolio-template" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio Template">View Project →</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" class="section container">
+      <h2>Skills</h2>
+      <ul class="skill-list">
+        <li>HTML5</li>
+        <li>CSS3 / Sass</li>
+        <li>JavaScript (ES6+)</li>
+        <li>React</li>
+        <li>Accessibility (WCAG)</li>
+        <li>Git & GitHub</li>
+      </ul>
+    </section>
+
+    <section id="contact" class="section container">
+      <h2>Contact Me</h2>
+      <form id="contact-form" class="contact-form" novalidate>
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" autocomplete="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" autocomplete="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit" class="btn primary">Send Message</button>
+        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Alex Carter. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
