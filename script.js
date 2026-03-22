@@ -2,8 +2,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const yearEl = document.getElementById('year');
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.getElementById('nav-links');
-  const contactForm = document.getElementById('contact-form');
-  const feedback = document.getElementById('form-feedback');
+  const accessForm = document.getElementById('access-form');
+  const accessAnswer = document.getElementById('access-answer');
+  const accessFeedback = document.getElementById('access-feedback');
+  const personalContent = document.getElementById('personal-content');
+  const lockedState = document.getElementById('locked-state');
+  const unlockedState = document.getElementById('unlocked-state');
 
   yearEl.textContent = new Date().getFullYear();
 
@@ -37,31 +41,33 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  const setFeedback = (message, type) => {
-    feedback.textContent = message;
-    feedback.classList.remove('success', 'error');
-    feedback.classList.add(type);
+  const setAccessFeedback = (message, type) => {
+    accessFeedback.textContent = message;
+    accessFeedback.classList.remove('success', 'error');
+    if (type) {
+      accessFeedback.classList.add(type);
+    }
   };
 
-  contactForm.addEventListener('submit', (event) => {
+  accessForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+    const answer = accessAnswer.value.trim().toLowerCase();
 
-    if (!name || !email || !message) {
-      setFeedback('Please fill in all fields.', 'error');
+    if (!answer) {
+      setAccessFeedback('Please enter an answer first.', 'error');
       return;
     }
 
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailOk) {
-      setFeedback('Please enter a valid email address.', 'error');
+    if (answer === 'friends') {
+      personalContent.classList.remove('is-locked');
+      lockedState.hidden = true;
+      unlockedState.hidden = false;
+      setAccessFeedback('Access granted — welcome to the personal preview.', 'success');
+      accessAnswer.value = '';
       return;
     }
 
-    setFeedback('Thanks! Your message is ready to send.', 'success');
-    contactForm.reset();
+    setAccessFeedback('Not quite — try your favorite sitcom guess again.', 'error');
   });
 });

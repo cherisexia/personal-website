@@ -3,100 +3,250 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Carter | Web Developer</title>
-  <meta name="description" content="Personal website for Alex Carter, a front-end web developer building accessible and fast websites.">
+  <title>Cherise Xia | Portfolio Preview</title>
+  <meta name="description" content="Preview of Cherise Xia's personal website with separated work and personal spaces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#home" class="logo">Alex<span>Dev</span></a>
+      <a href="#top" class="logo">Cherise<span>Xia</span></a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
         <span aria-hidden="true">☰</span>
       </button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="#preview">Preview</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#personal">Personal</a></li>
+        <li><a href="#notes">Site Notes</a></li>
       </ul>
     </nav>
   </header>
 
-  <main>
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <p class="eyebrow">Hello, I am</p>
-        <h1>Alex Carter</h1>
-        <p class="subtitle">I build clean, responsive websites and web apps.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="#contact">Hire Me</a>
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">Website preview for</p>
+          <h1>Cherise Xia</h1>
+          <p class="subtitle">
+            A brighter, more feminine portfolio direction with an easy-to-scan split between
+            <strong>Work</strong> and <strong>Personal</strong> spaces.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#preview">See the Preview</a>
+            <a class="btn ghost" href="#personal">Try the Personal Gate</a>
+          </div>
+        </div>
+
+        <aside class="hero-panel" aria-label="Preview summary">
+          <p class="panel-label">Concept direction</p>
+          <ul class="feature-list">
+            <li>Updated name and branding</li>
+            <li>Vibrant pink-plum-peach palette</li>
+            <li>Clear Work / Personal split</li>
+            <li>Personal area protected by a question prompt</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="preview" class="section container">
+      <div class="section-heading">
+        <p class="section-kicker">Quick preview</p>
+        <h2>Two spaces, one simple navigation flow</h2>
+        <p>
+          This preview focuses on structure and visual direction first, so you can confirm the feel
+          before I build the full experience.
+        </p>
+      </div>
+
+      <div class="split-preview">
+        <article class="preview-card preview-card-work">
+          <p class="card-tag">Work side</p>
+          <h3>Professional story, timeline, and project archive</h3>
+          <p>
+            This side is open and easy to browse for recruiters, collaborators, and clients.
+          </p>
+          <ul>
+            <li>About page with space for a work timeline</li>
+            <li>Projects page for all project case studies</li>
+            <li>Clear call-to-actions and clean scanning</li>
+          </ul>
+          <a href="#work" class="text-link">Jump to work preview</a>
+        </article>
+
+        <article class="preview-card preview-card-personal">
+          <p class="card-tag">Personal side</p>
+          <h3>Private, more intimate, and selectively shared</h3>
+          <p>
+            This side stays hidden until someone answers a personal question correctly.
+          </p>
+          <ul>
+            <li>Travel section visible after access</li>
+            <li>Flexible space for future personal categories</li>
+            <li>Friendly gate that feels warm, not harsh</li>
+          </ul>
+          <a href="#personal" class="text-link">Jump to personal preview</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="work" class="section work-section">
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Work preview</p>
+          <h2>A polished professional home base</h2>
+          <p>
+            For the full version, this can become its own dedicated work experience with additional detail.
+          </p>
+        </div>
+
+        <div class="work-layout">
+          <article class="surface intro-card">
+            <p class="card-tag">About</p>
+            <h3>Tell your story clearly</h3>
+            <p>
+              This area introduces who you are, what you do, and what kind of work you care about.
+              It is designed to feel polished but still personal.
+            </p>
+          </article>
+
+          <article class="surface timeline-card">
+            <p class="card-tag">Timeline</p>
+            <h3>Personal work timeline placeholder</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <span class="timeline-year">2026</span>
+                <div>
+                  <strong>Current role or focus</strong>
+                  <p>Add your latest role, startup, freelance focus, or key milestone here.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2024</span>
+                <div>
+                  <strong>Major transition or launch</strong>
+                  <p>Use this space for promotions, company moves, or major projects.</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <span class="timeline-year">2022</span>
+                <div>
+                  <strong>Earlier foundation</strong>
+                  <p>Include education, first roles, or formative professional experiences.</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <article class="surface projects-showcase">
+          <div class="projects-header">
+            <div>
+              <p class="card-tag">Projects page</p>
+              <h3>Space for all projects you've worked on</h3>
+            </div>
+            <a class="btn soft" href="#notes">Discuss structure</a>
+          </div>
+
+          <div class="project-grid">
+            <article class="project-card">
+              <h4>Flagship Project</h4>
+              <p>Feature a highlighted case study with impact, role, and results.</p>
+            </article>
+            <article class="project-card">
+              <h4>Team Collaboration</h4>
+              <p>Highlight cross-functional work, process, and launch outcomes.</p>
+            </article>
+            <article class="project-card">
+              <h4>Experimental Build</h4>
+              <p>Show playful or technical projects that reveal your curiosity.</p>
+            </article>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="personal" class="section personal-section">
+      <div class="container personal-layout">
+        <div class="section-heading narrow">
+          <p class="section-kicker">Personal preview</p>
+          <h2>A protected space for people who know you better</h2>
+          <p>
+            I used your suggested question as the gate for this preview. We can later swap this for
+            a passcode, a different prompt, or a softer hint-based interaction.
+          </p>
+        </div>
+
+        <div class="gate-and-content">
+          <article class="surface gate-card">
+            <p class="card-tag">Access prompt</p>
+            <h3>Oops — you need to know me a bit more</h3>
+            <p>What&apos;s my favorite TV show?</p>
+            <form id="access-form" class="access-form" novalidate>
+              <label for="access-answer">Your answer</label>
+              <input
+                type="text"
+                id="access-answer"
+                name="access-answer"
+                autocomplete="off"
+                placeholder="Type your guess"
+                aria-describedby="access-feedback"
+                required
+              >
+              <button type="submit" class="btn primary">Unlock personal preview</button>
+              <p id="access-feedback" class="form-feedback" aria-live="polite"></p>
+            </form>
+          </article>
+
+          <article class="surface personal-content is-locked" id="personal-content" aria-live="polite">
+            <div class="locked-state" id="locked-state">
+              <p class="card-tag">Locked</p>
+              <h3>Private sections stay hidden until access is granted</h3>
+              <p>
+                Once unlocked, this space can reveal travel, life updates, and future personal categories.
+              </p>
+            </div>
+
+            <div class="unlocked-state" id="unlocked-state" hidden>
+              <p class="card-tag">Unlocked preview</p>
+              <h3>Personal sections you can grow over time</h3>
+              <div class="personal-grid">
+                <section class="personal-block">
+                  <h4>Travel</h4>
+                  <p>Feature destinations, photo journals, maps, or favorite memories.</p>
+                </section>
+                <section class="personal-block">
+                  <h4>More coming soon</h4>
+                  <p>Keep placeholders for future sections such as hobbies, recommendations, or writing.</p>
+                </section>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section id="about" class="section container">
-      <h2>About Me</h2>
-      <p>
-        I am a front-end developer focused on crafting modern user experiences with HTML, CSS,
-        and JavaScript. I enjoy turning ideas into products that are accessible and easy to use.
-      </p>
-    </section>
-
-    <section id="projects" class="section container">
-      <h2>Projects</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>TaskFlow App</h3>
-          <p>A productivity web app for managing daily tasks with drag-and-drop boards.</p>
-          <a href="https://example.com/taskflow" target="_blank" rel="noopener noreferrer" aria-label="View TaskFlow App">View Project →</a>
-        </article>
-        <article class="card">
-          <h3>Foodie Finder</h3>
-          <p>A responsive restaurant discovery site featuring filters, maps, and reviews.</p>
-          <a href="https://example.com/foodie-finder" target="_blank" rel="noopener noreferrer" aria-label="View Foodie Finder">View Project →</a>
-        </article>
-        <article class="card">
-          <h3>Portfolio Template</h3>
-          <p>A customizable portfolio starter template built for freelancers and creators.</p>
-          <a href="https://example.com/portfolio-template" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio Template">View Project →</a>
-        </article>
-      </div>
-    </section>
-
-    <section id="skills" class="section container">
-      <h2>Skills</h2>
-      <ul class="skill-list">
-        <li>HTML5</li>
-        <li>CSS3 / Sass</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Accessibility (WCAG)</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section container">
-      <h2>Contact Me</h2>
-      <form id="contact-form" class="contact-form" novalidate>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" autocomplete="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn primary">Send Message</button>
-        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
-      </form>
+    <section id="notes" class="section container">
+      <article class="surface notes-card">
+        <p class="section-kicker">What this preview confirms</p>
+        <h2>Recommended direction before full implementation</h2>
+        <ul class="notes-list">
+          <li>Use <strong>Cherise Xia</strong> consistently across brand, hero, and footer.</li>
+          <li>Keep the site architecture centered around <strong>Work</strong> and <strong>Personal</strong>.</li>
+          <li>Turn the work side into dedicated About and Projects pages in the next pass.</li>
+          <li>Keep the personal side intentionally gated and expandable over time.</li>
+        </ul>
+      </article>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Alex Carter. All rights reserved.</p>
+    <p>© <span id="year"></span> Cherise Xia. Preview concept for your next website.</p>
   </footer>
 
   <script src="script.js"></script>
