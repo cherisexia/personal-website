@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cherise Xia | Personal</title>
+  <meta name="description" content="Personal page for Cherise Xia protected by a question gate.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a href="index.html" class="logo">Cherise<span>Xia</span></a>
+      <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
+        <span aria-hidden="true">☰</span>
+      </button>
+      <ul id="nav-links" class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="personal.html">Personal</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="page-shell personal-page-shell">
+    <section class="section container section-top">
+      <div class="gate-page" id="gate-page">
+        <article class="surface gate-card full-gate-card">
+          <p class="section-kicker">Personal access</p>
+          <h1 class="page-title">Oops — you need to know me a bit more</h1>
+          <p class="subtitle narrow-copy">
+            Before you can see anything on this page, answer the question below.
+          </p>
+          <form id="access-form" class="access-form gate-form" novalidate>
+            <label for="access-answer">What&apos;s my favorite TV show?</label>
+            <input
+              type="text"
+              id="access-answer"
+              name="access-answer"
+              autocomplete="off"
+              placeholder="Type your answer"
+              aria-describedby="access-feedback"
+              required
+            >
+            <button type="submit" class="btn primary">Unlock Personal Page</button>
+            <p id="access-feedback" class="form-feedback" aria-live="polite"></p>
+          </form>
+        </article>
+
+        <article class="surface personal-content is-hidden" id="personal-content" hidden aria-live="polite">
+          <div class="section-heading narrow-copy compact-heading">
+            <p class="section-kicker">Personal</p>
+            <h2>Travel and more</h2>
+            <p>
+              This personal page is intentionally private. Once unlocked, it can grow into a curated home
+              for travel and other personal sections you add over time.
+            </p>
+          </div>
+
+          <div class="personal-grid">
+            <section class="personal-block travel-block">
+              <p class="card-tag">Travel</p>
+              <h3>Trips, favorite places, and stories</h3>
+              <p>Add destination notes, photo highlights, itineraries, and memories here.</p>
+            </section>
+            <section class="personal-block">
+              <p class="card-tag">Pending</p>
+              <h3>More personal sections later</h3>
+              <p>Keep room for future sections like recommendations, routines, hobbies, or writing.</p>
+            </section>
+          </div>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>© <span id="year"></span> Cherise Xia.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

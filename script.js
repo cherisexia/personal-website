@@ -1,67 +1,79 @@
 document.addEventListener('DOMContentLoaded', () => {
+  if ('scrollRestoration' in history) {
+    history.scrollRestoration = 'manual';
+  }
+
+  window.scrollTo(0, 0);
   const yearEl = document.getElementById('year');
   const menuToggle = document.querySelector('.menu-toggle');
   const navLinks = document.getElementById('nav-links');
-  const contactForm = document.getElementById('contact-form');
-  const feedback = document.getElementById('form-feedback');
+  const accessForm = document.getElementById('access-form');
+  const accessAnswer = document.getElementById('access-answer');
+  const accessFeedback = document.getElementById('access-feedback');
+  const personalContent = document.getElementById('personal-content');
 
-  yearEl.textContent = new Date().getFullYear();
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 
-  const closeMenu = () => {
-    navLinks.classList.remove('show');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  };
+  if (menuToggle && navLinks) {
+    const closeMenu = () => {
+      navLinks.classList.remove('show');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    };
 
-  menuToggle.addEventListener('click', () => {
-    const isOpen = navLinks.classList.toggle('show');
-    menuToggle.setAttribute('aria-expanded', String(isOpen));
-  });
+    menuToggle.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('show');
+      menuToggle.setAttribute('aria-expanded', String(isOpen));
+    });
 
-  navLinks.addEventListener('click', (event) => {
-    if (event.target.tagName === 'A' && navLinks.classList.contains('show')) {
-      closeMenu();
-    }
-  });
+    navLinks.addEventListener('click', (event) => {
+      if (event.target.tagName === 'A' && navLinks.classList.contains('show')) {
+        closeMenu();
+      }
+    });
 
-  document.addEventListener('click', (event) => {
-    const clickedOutsideMenu = !navLinks.contains(event.target) && !menuToggle.contains(event.target);
-    if (clickedOutsideMenu && navLinks.classList.contains('show')) {
-      closeMenu();
-    }
-  });
+    document.addEventListener('click', (event) => {
+      const clickedOutsideMenu = !navLinks.contains(event.target) && !menuToggle.contains(event.target);
+      if (clickedOutsideMenu && navLinks.classList.contains('show')) {
+        closeMenu();
+      }
+    });
 
-  document.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && navLinks.classList.contains('show')) {
-      closeMenu();
-      menuToggle.focus();
-    }
-  });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && navLinks.classList.contains('show')) {
+        closeMenu();
+        menuToggle.focus();
+      }
+    });
+  }
 
-  const setFeedback = (message, type) => {
-    feedback.textContent = message;
-    feedback.classList.remove('success', 'error');
-    feedback.classList.add(type);
-  };
+  if (accessForm && accessAnswer && accessFeedback && personalContent) {
+    const setAccessFeedback = (message, type) => {
+      accessFeedback.textContent = message;
+      accessFeedback.classList.remove('success', 'error');
+      accessFeedback.classList.add(type);
+    };
 
-  contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+    accessForm.addEventListener('submit', (event) => {
+      event.preventDefault();
 
-    const name = document.getElementById('name').value.trim();
-    const email = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+      const answer = accessAnswer.value.trim().toLowerCase();
 
-    if (!name || !email || !message) {
-      setFeedback('Please fill in all fields.', 'error');
-      return;
-    }
+      if (!answer) {
+        setAccessFeedback('Please enter an answer first.', 'error');
+        return;
+      }
 
-    const emailOk = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-    if (!emailOk) {
-      setFeedback('Please enter a valid email address.', 'error');
-      return;
-    }
+      if (answer === 'friends') {
+        personalContent.hidden = false;
+        personalContent.classList.remove('is-hidden');
+        setAccessFeedback('Access granted — welcome to the personal page.', 'success');
+        accessAnswer.value = '';
+        return;
+      }
 
-    setFeedback('Thanks! Your message is ready to send.', 'success');
-    contactForm.reset();
-  });
+      setAccessFeedback('That is not it — try again.', 'error');
+    });
+  }
 });

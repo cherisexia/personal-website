@@ -3,100 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Alex Carter | Web Developer</title>
-  <meta name="description" content="Personal website for Alex Carter, a front-end web developer building accessible and fast websites.">
+  <title>Cherise Xia | Home</title>
+  <meta name="description" content="Cherise Xia's website with separate work and personal spaces.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <nav class="nav container" aria-label="Main navigation">
-      <a href="#home" class="logo">Alex<span>Dev</span></a>
+      <a href="index.html" class="logo">Cherise<span>Xia</span></a>
       <button class="menu-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Toggle navigation menu">
         <span aria-hidden="true">☰</span>
       </button>
       <ul id="nav-links" class="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#skills">Skills</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="work.html">Work</a></li>
+        <li><a href="personal.html">Personal</a></li>
       </ul>
     </nav>
   </header>
 
   <main>
-    <section id="home" class="hero">
-      <div class="container hero-content">
-        <p class="eyebrow">Hello, I am</p>
-        <h1>Alex Carter</h1>
-        <p class="subtitle">I build clean, responsive websites and web apps.</p>
-        <div class="hero-actions">
-          <a class="btn primary" href="#projects">View Projects</a>
-          <a class="btn ghost" href="#contact">Hire Me</a>
+    <section class="hero page-shell">
+      <div class="container hero-grid home-hero-grid">
+        <div class="hero-copy surface pastel-glow">
+          <p class="eyebrow">Welcome</p>
+          <h1>Cherise Xia</h1>
+          <p class="subtitle">
+            A clean, bright home page that leads people into two clearly separated spaces:
+            one for work and one for personal content.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="work.html">Go to Work</a>
+            <a class="btn secondary" href="personal.html">Go to Personal</a>
+          </div>
         </div>
+
+        <aside class="hero-panel surface">
+          <p class="panel-label">Site structure</p>
+          <ul class="feature-list">
+            <li>Home page introduces both paths</li>
+            <li>Work lives on its own page</li>
+            <li>Personal lives on its own locked page</li>
+            <li>Pastel palette with clearer contrast and softer energy</li>
+          </ul>
+        </aside>
       </div>
     </section>
 
-    <section id="about" class="section container">
-      <h2>About Me</h2>
-      <p>
-        I am a front-end developer focused on crafting modern user experiences with HTML, CSS,
-        and JavaScript. I enjoy turning ideas into products that are accessible and easy to use.
-      </p>
-    </section>
+    <section class="section container pathway-section">
+      <div class="section-heading centered narrow-copy">
+        <p class="section-kicker">Choose a path</p>
+        <h2>Simple to navigate, separate by design</h2>
+        <p>
+          Instead of mixing work and personal content on one page, this homepage sends visitors
+          directly to the right experience.
+        </p>
+      </div>
 
-    <section id="projects" class="section container">
-      <h2>Projects</h2>
-      <div class="card-grid">
-        <article class="card">
-          <h3>TaskFlow App</h3>
-          <p>A productivity web app for managing daily tasks with drag-and-drop boards.</p>
-          <a href="https://example.com/taskflow" target="_blank" rel="noopener noreferrer" aria-label="View TaskFlow App">View Project →</a>
+      <div class="pathway-grid">
+        <article class="pathway-card work-card">
+          <p class="card-tag">Work page</p>
+          <h3>Professional story and project portfolio</h3>
+          <p>
+            Share your about section, work timeline, selected projects, and contact information
+            in a polished, recruiter-friendly format.
+          </p>
+          <ul>
+            <li>About overview</li>
+            <li>Work timeline</li>
+            <li>Projects section</li>
+          </ul>
+          <a class="btn soft" href="work.html">Open Work</a>
         </article>
-        <article class="card">
-          <h3>Foodie Finder</h3>
-          <p>A responsive restaurant discovery site featuring filters, maps, and reviews.</p>
-          <a href="https://example.com/foodie-finder" target="_blank" rel="noopener noreferrer" aria-label="View Foodie Finder">View Project →</a>
-        </article>
-        <article class="card">
-          <h3>Portfolio Template</h3>
-          <p>A customizable portfolio starter template built for freelancers and creators.</p>
-          <a href="https://example.com/portfolio-template" target="_blank" rel="noopener noreferrer" aria-label="View Portfolio Template">View Project →</a>
+
+        <article class="pathway-card personal-card">
+          <p class="card-tag">Personal page</p>
+          <h3>Locked until the question is answered</h3>
+          <p>
+            Visitors must answer your question before seeing any personal content, including
+            travel and future private sections.
+          </p>
+          <ul>
+            <li>Question gate appears first</li>
+            <li>No personal content visible before access</li>
+            <li>Expandable private sections later</li>
+          </ul>
+          <a class="btn soft" href="personal.html">Try Personal Access</a>
         </article>
       </div>
-    </section>
-
-    <section id="skills" class="section container">
-      <h2>Skills</h2>
-      <ul class="skill-list">
-        <li>HTML5</li>
-        <li>CSS3 / Sass</li>
-        <li>JavaScript (ES6+)</li>
-        <li>React</li>
-        <li>Accessibility (WCAG)</li>
-        <li>Git & GitHub</li>
-      </ul>
-    </section>
-
-    <section id="contact" class="section container">
-      <h2>Contact Me</h2>
-      <form id="contact-form" class="contact-form" novalidate>
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" autocomplete="name" required>
-
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" autocomplete="email" required>
-
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="5" required></textarea>
-
-        <button type="submit" class="btn primary">Send Message</button>
-        <p id="form-feedback" class="form-feedback" aria-live="polite"></p>
-      </form>
     </section>
   </main>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Alex Carter. All rights reserved.</p>
+    <p>© <span id="year"></span> Cherise Xia.</p>
   </footer>
 
   <script src="script.js"></script>
